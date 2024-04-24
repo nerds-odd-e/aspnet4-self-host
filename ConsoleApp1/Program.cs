@@ -17,6 +17,13 @@ namespace ConsoleApp1
                 "API Default", "api/{controller}/{id}",
                 new { id = RouteParameter.Optional });
 
+            // Custom route
+            config.Routes.MapHttpRoute(
+                name: "IapApi",
+                routeTemplate: "iap/alarm-manager/get-all-alarm-ids",
+                defaults: new { controller = "IapAlarmManager", action = "GetAllAlarmIds" }
+            );
+
             using (HttpSelfHostServer server = new HttpSelfHostServer(config))
             {
                 server.OpenAsync().Wait();

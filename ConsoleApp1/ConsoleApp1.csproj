@@ -59,6 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IapAlarmManagerController.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="ProductsController.cs" />
     <Compile Include="Program.cs" />
